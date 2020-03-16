@@ -1,4 +1,7 @@
 function stripVowelsUppercaseFirst(string) {
+    if (typeof string !== 'string') {
+        return '';
+    }
     string = string.replace(/[aeiou]/gi, '').toLowerCase().split("");
     const firstLetter = string.shift().toUpperCase();
     string.unshift(firstLetter);

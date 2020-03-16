@@ -1,14 +1,14 @@
-const arrayRepeater = require('../src/repeat.js');
+const { repeat, repeatConcat, repeatLoopES5, repeatLoopES6 } = require('../src/repeat-array.js');
 
 test('Return the contents of an array repeated 3 times', () => {
-    expect(arrayRepeater.repeat([1, 2, 3])).toEqual([
+    expect(repeat([1, 2, 3])).toEqual([
         1, 2, 3, 1, 2, 3, 1, 2, 3
     ]);
-    expect(arrayRepeater.repeat(['a', 'b', 'c'])).toEqual([
+    expect(repeat(['a', 'b', 'c'])).toEqual([
         'a', 'b', 'c', 'a', 'b', 'c', 'a', 'b', 'c'
     ]);
     expect(
-        arrayRepeater.repeat([
+        repeat([
             [1, 2, 3],
             [1, 2, 3],
             [1, 2, 3]
@@ -26,14 +26,14 @@ test('Return the contents of an array repeated 3 times', () => {
 });
 
 test('Return the contents of an array repeated 3 times', () => {
-    expect(arrayRepeater.repeatConcat([1, 2, 3])).toEqual([
+    expect(repeatConcat([1, 2, 3])).toEqual([
         1, 2, 3, 1, 2, 3, 1, 2, 3
     ]);
-    expect(arrayRepeater.repeat(['a', 'b', 'c'])).toEqual([
+    expect(repeat(['a', 'b', 'c'])).toEqual([
         'a', 'b', 'c', 'a', 'b', 'c', 'a', 'b', 'c'
     ]);
     expect(
-        arrayRepeater.repeat([
+        repeat([
             [1, 2, 3],
             [1, 2, 3],
             [1, 2, 3]
@@ -51,14 +51,14 @@ test('Return the contents of an array repeated 3 times', () => {
 });
 
 test('Return the contents of an array repeated n times', () => {
-    expect(arrayRepeater.repeatLoopES5([1, 2, 3], 3)).toEqual([
+    expect(repeatLoopES5([1, 2, 3], 3)).toEqual([
         1, 2, 3, 1, 2, 3, 1, 2, 3
     ]);
-    expect(arrayRepeater.repeat(['a', 'b', 'c'])).toEqual([
+    expect(repeat(['a', 'b', 'c'])).toEqual([
         'a', 'b', 'c', 'a', 'b', 'c', 'a', 'b', 'c'
     ]);
     expect(
-        arrayRepeater.repeat([
+        repeat([
             [1, 2, 3],
             [1, 2, 3],
             [1, 2, 3]
@@ -76,14 +76,14 @@ test('Return the contents of an array repeated n times', () => {
 });
 
 test('Return the contents of an array repeated n times', () => {
-    expect(arrayRepeater.repeatLoopES6([1, 2, 3], 3)).toEqual([
+    expect(repeatLoopES6([1, 2, 3], 3)).toEqual([
         1, 2, 3, 1, 2, 3, 1, 2, 3
     ]);
-    expect(arrayRepeater.repeat(['a', 'b', 'c'])).toEqual([
+    expect(repeat(['a', 'b', 'c'])).toEqual([
         'a', 'b', 'c', 'a', 'b', 'c', 'a', 'b', 'c'
     ]);
     expect(
-        arrayRepeater.repeat([
+        repeat([
             [1, 2, 3],
             [1, 2, 3],
             [1, 2, 3]

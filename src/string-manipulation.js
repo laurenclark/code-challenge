@@ -1,11 +1,13 @@
 function stripVowelsUppercaseFirst(string) {
     if (typeof string !== 'string') {
-        return '';
+        const error = new Error("Input is not a string");
+        console.error(error);
+    } else {
+        string = string.replace(/[aeiou]/gi, '').toLowerCase().split("");
+        const firstLetter = string.shift().toUpperCase();
+        string.unshift(firstLetter);
+        return string.join("");
     }
-    string = string.replace(/[aeiou]/gi, '').toLowerCase().split("");
-    const firstLetter = string.shift().toUpperCase();
-    string.unshift(firstLetter);
-    return string.join("");
 }
 
 stripVowelsUppercaseFirst("liMeSHArp DeveLoper TEST"); //?

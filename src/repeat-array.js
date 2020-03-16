@@ -24,7 +24,7 @@ function repeatConcat(array) {
  * @param {array: any} Array
  * @param {int: int} number of times to repeat array
  */
-function repeatLoopES5(array, number) {
+function repeatLoopES5(array, number = 3) {
     let temp = [];
     for (let i = 0; i < number; i++) {
         temp.push(array.slice(0));
@@ -38,7 +38,7 @@ function repeatLoopES5(array, number) {
  * @param {array: any} Array
  * @param {int: int} number of times to repeat array
  */
-function repeatLoopES6(array, number) {
+function repeatLoopES6(array, number = 3) {
     let temp = [];
     for (let i = 0; i < number; i++) {
         temp.push([...array]);

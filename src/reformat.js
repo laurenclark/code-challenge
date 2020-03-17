@@ -1,7 +1,7 @@
-function stripVowelsUppercaseFirst(string) {
+function reformat(string) {
     if (typeof string !== 'string') {
         const error = new Error("Input is not a string");
-        console.error(error);
+        return error;
     } else {
         string = string.replace(/[aeiou]/gi, '').toLowerCase().split("");
         const firstLetter = string.shift().toUpperCase();
@@ -10,7 +10,7 @@ function stripVowelsUppercaseFirst(string) {
     }
 }
 
-stripVowelsUppercaseFirst("liMeSHArp DeveLoper TEST"); //?
-stripVowelsUppercaseFirst("tHe RaiN iN sPaiN fallS mAinlY oN THE PLANE") //?
+reformat("liMeSHArp DeveLoper TEST"); //?
+reformat("tHe RaiN iN sPaiN fallS mAinlY oN THE PLANE") //?
 
-module.exports = stripVowelsUppercaseFirst;
+module.exports = reformat;

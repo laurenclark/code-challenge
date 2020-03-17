@@ -3,6 +3,7 @@
  * Repeat 3 times the contents of an array
  *
  * @param {array: number} An array
+ * @returns Array
  */
 
 function repeat(array) {
@@ -13,6 +14,7 @@ function repeat(array) {
  * Repeat 3 times the contents of an array
  *
  * @param {array: number} An array
+ * @returns Array
  */
 function repeatConcat(array) {
     return array.concat(array).concat(array);
@@ -23,6 +25,7 @@ function repeatConcat(array) {
  *
  * @param {array: any} Array
  * @param {int: int} number of times to repeat array
+ * @returns Array
  */
 function repeatLoopES5(array, number = 3) {
     let temp = [];
@@ -37,6 +40,7 @@ function repeatLoopES5(array, number = 3) {
  *
  * @param {array: any} Array
  * @param {int: int} number of times to repeat array
+ * @returns Array
  */
 function repeatLoopES6(array, number = 3) {
     let temp = [];

@@ -26,7 +26,7 @@ function repeatConcat(array) {
  */
 function repeatLoopES5(array, number = 3) {
     let temp = [];
-    for (let i = 0; i < number; i++) {
+    for (let i = 0; i < number; i += 1) {
         temp.push(array.slice(0));
     }
     return Array.prototype.concat.apply([], temp);
@@ -40,7 +40,7 @@ function repeatLoopES5(array, number = 3) {
  */
 function repeatLoopES6(array, number = 3) {
     let temp = [];
-    for (let i = 0; i < number; i++) {
+    for (let i = 0; i < number; i += 1) {
         temp.push([...array]);
     }
     return temp.flat(1);
